@@ -224,7 +224,7 @@ p {
     max-height: min-content;
   }
   body {
-    overflow-y: hidden;
-    padding: 8vh 15px;
+    overflow-x: unset;
+    padding: 8vh 24px;
   }
 }
