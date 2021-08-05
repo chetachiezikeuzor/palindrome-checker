@@ -26,8 +26,7 @@ VARIABLES
 
 body {
   min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--default-font);
   background-image: linear-gradient(
     to bottom right,
     var(--sleak-medium),
@@ -35,8 +34,8 @@ body {
     var(--blue-eade)
   );
   overflow-x: hidden;
-  -webkit-tap-highlight-color: transparent;
   padding: 5vh 15px;
+  text-align: center;
 }
 
 body::before {
@@ -63,22 +62,33 @@ body::before {
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 3em;
+  text-transform: capitalize;
+}
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 1.15em;
+  line-height: 1.56em;
+}
+
 .main-container {
+  top: 50%;
+  left: 50%;
+  max-width: 900px;
+  padding: 68px;
+  margin: 0 auto;
+  border-radius: 12px;
+  position: absolute;
   background-color: var(--white-alpha-36);
   border: 1px solid var(--white-alpha-40);
-  border-radius: 18px;
-  margin: 0 auto;
-  width: 76vw;
-  position: absolute;
   transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  padding: 68px;
-  box-shadow: 0 2px 8px 0 #ff85ff;
+  box-shadow: 0 2px 90px 12px #ff85ff;
 }
 
 .inputDiv {
-  column-gap: 26px;
   align-items: center;
   display: grid;
   grid-template-columns: 1fr 0.5fr;
@@ -89,6 +99,8 @@ body::before {
   font-family: var(--default-font);
   background-color: var(--white);
   border: 1px solid var(--white-alpha-75);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .textInput,
@@ -98,28 +110,50 @@ body::before {
   width: auto;
   z-index: 3;
   font-size: 15px;
-  padding: 1.2em 0.5em;
-  border-radius: 6px;
+  padding: 1em 0.5em;
 }
 
 .button {
   float: right;
-  justify-content: center;
   align-items: center;
-  border: 2px solid var(--white-alpha-36);
-  background-color: #ff85ff;
-  -webkit-transition: color 200ms ease, border 200ms ease,
-    background-color 300ms ease;
-  transition: color 200ms ease, border 200ms ease, background-color 300ms ease;
   color: #ebeefa;
   font-weight: 600;
   text-align: center;
   cursor: pointer;
+  justify-content: center;
+  border: 2px solid var(--white-alpha-36);
+  background-color: #ff85ff;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  -webkit-transition: color 200ms ease, border 200ms ease,
+    background-color 300ms ease;
+  transition: color 200ms ease, border 200ms ease, box-shadow 300ms ease,
+    background-color 300ms ease;
+}
+
+.button:hover {
+  box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.1), 0 0 0 1px hsla(293, 85%, 86%, 25%);
+  border: 2px solid hsla(293, 85%, 86%, 100%) !important;
 }
 
 .checker {
   margin-top: 25px;
-  font-size: 18px;
+  font-size: 1.25em;
+  font-weight: 700;
   color: #262626;
   text-align: center;
+}
+
+@media screen and (max-width: 925px) {
+  .inputDiv {
+    grid-template-columns: 1fr;
+    row-gap: 22px;
+  }
+  .textInput,
+  .button {
+    border-radius: 6px;
+  }
+  .main-container {
+    padding: 78px;
+  }
 }

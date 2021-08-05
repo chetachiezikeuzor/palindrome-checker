@@ -19,9 +19,9 @@ document.getElementById("inputButton").addEventListener("click", function () {
   // boolean to see if the changed string is the same as the reversal
   var results = document.getElementById("checker");
   if (strChange === joinTheArray) {
-    results.innerHTML = `<text>🥳 <em>"${text}"</em> id a palindrome</text>`;
+    results.innerHTML = `<text>🥳 <em style="color: #ff85ff">"${text}"</em> is a palindrome</text>`;
   } else if (strChange !== joinTheArray) {
-    results.innerHTML = `<text>🥸 <em>"${text}"</em> is not a palindrome</text?`;
+    results.innerHTML = `<text>🥸 <em style="color: #ff85ff">"${text}"</em> is not a palindrome</text?`;
   } else {
     results.innerHTML = `😵‍💫 Something went wrong`;
   }
