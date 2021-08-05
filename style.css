@@ -1,0 +1,125 @@
+/*-----------------
+VARIABLES
+------------------*/
+:root {
+  --white: #f8f8f8;
+  --blue: #0000ff;
+  --blue-dark: #18182c;
+  --pageant-pink: #ff85ff;
+  --sleak-bold: rgb(218, 221, 221);
+  --sleak-medium: hsla(40, 5%, 89%, 100%);
+  --pink-light: hsl(292, 57%, 97%);
+  --blue-eade: hsla(214, 10%, 86%, 100%);
+  --white-alpha-75: rgba(255, 255, 255, 0.6);
+  --white-alpha-40: rgba(255, 255, 255, 0.4);
+  --white-alpha-36: rgba(255, 255, 255, 0.36);
+  --backdrop-filter-blur: blur(5px);
+
+  --default-font: "DM Sans", -apple-system, BlinkMacSystemFont, "DM Sans",
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+
+  --text-normal: ;
+  --text-muted: ;
+  --text-faint: ;
+}
+
+body {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--sleak-medium),
+    var(--pink-light),
+    var(--blue-eade)
+  );
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  padding: 5vh 15px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--pageant-pink);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.main-container {
+  background-color: var(--white-alpha-36);
+  border: 1px solid var(--white-alpha-40);
+  border-radius: 18px;
+  margin: 0 auto;
+  width: 76vw;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  padding: 68px;
+  box-shadow: 0 2px 8px 0 #ff85ff;
+}
+
+.inputDiv {
+  column-gap: 26px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+}
+
+.textInput {
+  font-size: 14px;
+  font-family: var(--default-font);
+  background-color: var(--white);
+  border: 1px solid var(--white-alpha-75);
+}
+
+.textInput,
+.button {
+  position: relative;
+  display: flex;
+  width: auto;
+  z-index: 3;
+  font-size: 15px;
+  padding: 1.2em 0.5em;
+  border-radius: 6px;
+}
+
+.button {
+  float: right;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--white-alpha-36);
+  background-color: #ff85ff;
+  -webkit-transition: color 200ms ease, border 200ms ease,
+    background-color 300ms ease;
+  transition: color 200ms ease, border 200ms ease, background-color 300ms ease;
+  color: #ebeefa;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.checker {
+  margin-top: 25px;
+  font-size: 18px;
+  color: #262626;
+  text-align: center;
+}
