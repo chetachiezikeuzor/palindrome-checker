@@ -15,12 +15,16 @@ document.getElementById("inputButton").addEventListener("click", function () {
   // this is to join the reversal back together.
   var joinTheArray = reverseTheArray.join("");
 
+  console.log(joinTheArray, " and", strChange);
+
   // boolean to see if the changed string is the same as the reversal
   var results = document.getElementById("checker");
-  if (strChange === joinTheArray) {
+  if (strChange !== "" && strChange === joinTheArray) {
     results.innerHTML = `<text>🥳 <em style="color: #ff85ff">"${text}"</em> is a palindrome</text>`;
   } else if (strChange !== joinTheArray) {
     results.innerHTML = `<text>🥸 <em style="color: #ff85ff">"${text}"</em> is not a palindrome</text?`;
+  } else if (strChange === "") {
+    results.innerHTML = `<text>😬 <em style="color: #ff85ff">"${text}"</em> special characters don't count</text?`;
   } else {
     results.innerHTML = `😵‍💫 Something went wrong`;
   }
