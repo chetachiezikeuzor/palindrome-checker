@@ -18,21 +18,18 @@ VARIABLES
   --default-font: "DM Sans", -apple-system, BlinkMacSystemFont, "DM Sans",
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
-
-  --text-normal: ;
-  --text-muted: ;
-  --text-faint: ;
 }
 
 body {
   min-height: 100vh;
   font-family: var(--default-font);
-  background-image: linear-gradient(
-    to bottom right,
-    var(--sleak-medium),
-    var(--pink-light),
-    var(--blue-eade)
-  );
+  background-image: url("https://i.imgur.com/8hnOr2h.png"),
+    linear-gradient(
+      to bottom right,
+      var(--sleak-medium),
+      var(--pink-light),
+      var(--blue-eade)
+    );
   overflow-x: hidden;
   padding: 5vh 15px;
   text-align: center;
@@ -86,6 +83,9 @@ p {
   border: 1px solid var(--white-alpha-40);
   transform: translate(-50%, -50%);
   box-shadow: 0 2px 90px 12px #ff85ff;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .inputDiv {

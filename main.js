@@ -1,6 +1,5 @@
 document.getElementById("inputButton").addEventListener("click", function () {
   var text = document.getElementById("textInput").value;
-  console.log(text);
   // this is to replace all spaces and special characters in the input string
   var strChange = text
     .replace(/ /g, "")
