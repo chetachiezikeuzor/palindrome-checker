@@ -223,4 +223,8 @@ p {
     padding: 50px;
     max-height: min-content;
   }
+  body {
+    overflow-y: hidden;
+    padding: 8vh 15px;
+  }
 }
