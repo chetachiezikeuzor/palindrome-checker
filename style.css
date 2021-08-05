@@ -220,6 +220,7 @@ p {
     border-radius: 6px;
   }
   .main-container {
-    padding: 78px;
+    padding: 68px;
+    max-height: 600px;
   }
 }
