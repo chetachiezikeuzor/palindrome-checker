@@ -154,6 +154,12 @@ p {
   align-content: center;
 }
 
+.inner-container {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
 .inputDiv {
   align-items: center;
   display: grid;
@@ -203,7 +209,6 @@ p {
 }
 
 .checker {
-  margin-top: 25px;
   font-size: 1.25em;
   font-weight: 700;
   color: #262626;
@@ -213,18 +218,27 @@ p {
 @media screen and (max-width: 925px) {
   .inputDiv {
     grid-template-columns: 1fr;
-    row-gap: 22px;
+    row-gap: 18px;
   }
   .textInput,
   .button {
     border-radius: 6px;
+    padding: 0.75em 0.5em;
   }
   .main-container {
-    padding: 50px;
+    padding: 36px 46px;
     max-height: min-content;
   }
   body {
-    overflow-x: unset;
+    overflow-x: hidden;
     padding: 8vh 24px;
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  p,
+  .checker {
+    font-size: 17px;
   }
 }
