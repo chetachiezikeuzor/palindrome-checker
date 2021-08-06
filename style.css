@@ -68,13 +68,14 @@
 VARIABLES
 ------------------*/
 :root {
-  --white: #f8f8f8;
   --blue: #0000ff;
+  --blue-alpha-50: rgba(255, 70, 240, 0.25);
   --blue-dark: #18182c;
-  --pageant-pink: #ff85ff;
-  --sleak-bold: rgb(218, 221, 221);
-  --sleak-medium: hsla(40, 5%, 89%, 100%);
-  --pink-light: hsl(292, 57%, 97%);
+  --orange: #ffa500;
+  --green-yellow: #cddc39;
+  --pink-bold: hsl(324, 99%, 66%);
+  --pink-medium: hsl(324, 100%, 75%);
+  --pink-light: hsl(317, 100%, 94%);
   --blue-eade: hsla(214, 10%, 86%, 100%);
   --white-alpha-75: rgba(255, 255, 255, 0.6);
   --white-alpha-40: rgba(255, 255, 255, 0.4);
@@ -91,13 +92,16 @@ body {
   font-family: var(--default-font);
   background-image: linear-gradient(
     to bottom right,
-    var(--sleak-medium),
-    var(--pink-light),
-    var(--blue-eade)
+    var(--pink-bold),
+    var(--pink-medium),
+    var(--pink-light)
   );
+  margin: 0;
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.75em;
   overflow-x: hidden;
   padding: 5vh 15px;
-  text-align: center;
 }
 
 body::before {
@@ -112,15 +116,11 @@ body::before {
   opacity: 0.5;
 }
 
-* {
-  box-sizing: border-box;
+*,
+*:before,
+*:after {
   padding: 0;
   margin: 0;
-  outline: none;
-}
-
-::before,
-::after {
   box-sizing: border-box;
 }
 
@@ -138,26 +138,22 @@ p {
 }
 
 .main-container {
-  top: 50%;
-  left: 50%;
-  max-width: 900px;
-  padding: 68px;
-  margin: 0 auto;
-  border-radius: 12px;
+  width: 560px;
   position: absolute;
-  background-color: var(--white-alpha-36);
-  border: 1px solid var(--white-alpha-40);
   transform: translate(-50%, -50%);
-  box-shadow: 0 2px 90px 12px #ff85ff;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
+  left: 50%;
+  top: 50%;
 }
 
-.inner-container {
-  margin: 0 auto;
-  height: 100%;
+.inner-content {
   width: 100%;
+  background-color: var(--white-alpha-36);
+  padding: 50px 40px;
+  border: 2px solid var(--white-alpha-40);
+  box-shadow: 0 2px 100px 60px var(--blue-alpha-50);
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  text-align: center;
 }
 
 .inputDiv {
@@ -183,17 +179,17 @@ p {
   z-index: 3;
   font-size: 15px;
   padding: 1em 0.5em;
+  outline: none;
 }
 
 .button {
   float: right;
   align-items: center;
-  color: #ebeefa;
   font-weight: 600;
   text-align: center;
   cursor: pointer;
   justify-content: center;
-  border: 2px solid var(--white-alpha-36);
+  border: 2px solid var(--white-alpha-75);
   background-color: #ff85ff;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -204,14 +200,15 @@ p {
 }
 
 .button:hover {
-  box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.1), 0 0 0 1px hsla(293, 85%, 86%, 25%);
+  box-shadow: 0 0 0 0.1px rgba(255, 30, 255, 0.356),
+    0 0 0 1px rgba(237, 102, 255, 0.25);
   border: 2px solid hsla(293, 85%, 86%, 100%) !important;
 }
 
 .checker {
   font-size: 1.25em;
   font-weight: 700;
-  color: #262626;
+  color: #181818;
   text-align: center;
 }
 
@@ -236,7 +233,7 @@ p {
     font-size: 18px;
   }
   h1 {
-    font-size: 36px;
+    font-size: 38px;
   }
   p,
   .checker {
