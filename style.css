@@ -104,6 +104,10 @@ body {
   padding: 5vh 15px;
 }
 
+body * {
+  font-size: 16px;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -133,7 +137,6 @@ h1 {
 p {
   margin-top: 1em;
   margin-bottom: 1em;
-  font-size: 1.15em;
   line-height: 1.56em;
 }
 
@@ -163,7 +166,6 @@ p {
 }
 
 .textInput {
-  font-size: 14px;
   font-family: var(--default-font);
   background-color: var(--white);
   border: 1px solid var(--white-alpha-75);
@@ -177,7 +179,6 @@ p {
   display: flex;
   width: auto;
   z-index: 3;
-  font-size: 15px;
   padding: 1em 0.5em;
   outline: none;
 }
@@ -224,19 +225,17 @@ p {
   }
   .main-container {
     padding: 46px;
+    width: 480px;
     max-height: min-content;
   }
   body {
-    overflow-x: hidden;
-    overflow-y: hidden;
     padding: 5vh 24px;
-    font-size: 18px;
+    font-size: 15px;
+  }
+  body * {
+    font-size: 15px;
   }
   h1 {
-    font-size: 38px;
-  }
-  p,
-  .checker {
-    font-size: 17px;
+    font-size: 32px;
   }
 }
