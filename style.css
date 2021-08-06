@@ -216,10 +216,14 @@ button {
 }
 
 .checker {
-  font-size: 1.25em;
   font-weight: 700;
   color: #181818;
   text-align: center;
+}
+
+.checker em,
+.checker text {
+  font-size: 20px;
 }
 
 @media screen and (max-width: 925px) {
