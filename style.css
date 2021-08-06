@@ -165,6 +165,15 @@ p {
   grid-template-columns: 1fr 0.5fr;
 }
 
+::placeholder {
+  color: #363657;
+  opacity: 0.5;
+}
+
+button {
+  color: white;
+}
+
 .textInput {
   font-family: var(--default-font);
   background-color: var(--white);
