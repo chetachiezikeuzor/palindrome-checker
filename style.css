@@ -162,6 +162,7 @@ p {
 .inputDiv {
   align-items: center;
   display: grid;
+  background-color: var(--white-alpha-36);
   grid-template-columns: 1fr 0.5fr;
 }
 
@@ -219,6 +220,7 @@ button {
   font-weight: 700;
   color: #181818;
   text-align: center;
+  margin-top: 25px;
 }
 
 .checker em,
